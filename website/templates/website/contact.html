@@ -1,0 +1,49 @@
+
+{% extends 'base.html' %}
+{% load static  %}
+{% block content %}
+    <div class="container-fluid contact-header">
+        <div class="row">
+            <div class="col-12">
+                <div class =''>
+
+                    <h1>Contact</h1>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class =''>
+
+
+                </div>
+
+            </div>
+            <div class="col-6">
+                <div class =''>
+                    <div class="">
+
+                         <h4>How to Get Here</h4>
+                        <iframe
+                                width="600"
+                                height="450"
+                                style="border:0"
+                                loading="lazy"
+                                allowfullscreen
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://www.google.com/maps/embed/v1/place?key={{ api_key }}
+                                    &q={{ landmark }}">
+                        </iframe>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+{% endblock %}
