@@ -2,48 +2,40 @@
 {% extends 'base.html' %}
 {% load static  %}
 {% block content %}
-    <div class="container-fluid contact-header">
+    <div class="container contact-header">
         <div class="row">
-            <div class="col-12">
-                <div class =''>
-
-                    <h1>Contact</h1>
-                </div>
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <div class =''>
-
-
-                </div>
-
-            </div>
-            <div class="col-6">
-                <div class =''>
-                    <div class="">
-
-                         <h4>How to Get Here</h4>
-                        <iframe
-                                width="600"
-                                height="450"
-                                style="border:0"
-                                loading="lazy"
-                                allowfullscreen
-                                referrerpolicy="no-referrer-when-downgrade"
-                                src="https://www.google.com/maps/embed/v1/place?key={{ api_key }}
+            <div class="col-lg-6 p-4" >
+                <iframe
+                        width="600"
+                        height="450"
+                        style="border:0"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed/v1/place?key={{ api_key }}
                                     &q={{ landmark }}">
-                        </iframe>
-                    </div>
+                </iframe>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="contact-header">
+                    <h5>Address</h5>
+                    <p>Viale Giulio Cesare, 26, 24123, Bergamo</p>
+                    <h5>Phone / WhatsApp</h5>
+                    <p>+39 3396075144</p>
+                    <h5>Email</h5>
+                    <p>info@bbbambam.com</p>
+
 
                 </div>
-
             </div>
-        </div>
 
+        </div>
 
     </div>
+
 
 
 {% endblock %}
