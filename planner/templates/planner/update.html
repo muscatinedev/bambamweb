@@ -1,0 +1,66 @@
+
+{% extends 'base.html' %}
+{% load static   %}
+
+{% block content %}
+
+    <div class="container  ">
+        <div class="allincenter">
+            <div class="card mt-5 p-4  " style="max-width: fit-content">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <table class="table table-borderless">
+                        <tr>
+                            <td>
+                                {{ form.dataTask.label }}
+                            </td>
+                            <td>
+                                {{ form.dataTask }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                {{ form.descrizione.label }}
+                            </td>
+                            <td>
+                                {{ form.descrizione }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                {{ form.spesa.label }}
+                            </td>
+                            <td>
+                                {{ form.spesa }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                {{ form.completato.label }} {{ form.completato }}
+                            </td>
+                            <td  class="allinright">
+
+                                {{ form.dataCompletamento }}
+                            </td>
+                        </tr>
+
+                    </table>
+
+
+
+                    {% if update == True %}
+                        <input type="submit" value="Update" class="btn btn-warning">
+                    {% else %}
+                        <input type="submit" value="Create" class="btn btn-success">
+                    {% endif %}
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+{% endblock %}

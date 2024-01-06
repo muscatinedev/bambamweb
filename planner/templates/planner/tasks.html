@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    {% include 'nav.html' %}
+
+    <div class="container">
+<H1>TASKS</H1>
+        <table class="table">
+            <tr>
+                <th>Data</th>
+                <th>Data Completamento</th>
+                <th>Descrizione</th>
+                <th>Spesa</th>
+                <th>Completato</th>
+            </tr>
+            {% for t in tasks %}
+                <tr>
+                    <td>
+                        {{ t.dataTask }}
+                    </td>
+                    <td>
+                        {{ t.dataCompletamento }}
+                    </td>
+                    <td>{{ t.descrizione }}</td>
+                    <td>{{ t.spesa }}</td>
+                    <td>{{ t.completato }}</td>
+                    <td><a href="{% url 'task-update' t.id %}">edit</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+
+
+{% endblock content %}
+

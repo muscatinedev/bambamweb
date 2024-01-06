@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    {% include 'nav.html' %}
+
+    <div class="container">
+        <div class="row">
+            {% for d in days %}
+                <div class="col-3">
+                    <div class="card" style="min-width: 18rem;">
+                        <div class="card-header">
+                            {{ d.0 }}
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"> {{ d.1 }}</li>
+
+                        </ul>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"> {{ d.2 }}</li>
+
+                        </ul>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"> {{ d.3 }}</li>
+
+                        </ul>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"> {{ d.4 }}</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+            {% endfor %}
+        </div>
+
+    </div>
+
+
+
+{% endblock content %}
+
