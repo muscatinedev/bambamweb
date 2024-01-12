@@ -1,12 +1,15 @@
-body{
-    background-color: #003366;
-}
+
 
 .bg-seppia{
 
     background-color: #989797;
 }
+.carousel-item{
 
+    height: 32rem;
+    background: #777;
+    color: #eee;
+}
 
 
 .bg-seppialight{
@@ -23,9 +26,9 @@ body{
 
 footer {
     color: #4ac1f7;
-    position:absolute;
-    bottom:0;
+    position: absolute; bottom: 0; left: 0; right: 0;
     width:100%;
     height:60px;   /* Height of the footer */
     background:#fff;
 }
+html, body {padding:0; margin:0; height:100%;  background-color: #003366;}
